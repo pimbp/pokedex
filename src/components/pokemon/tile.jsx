@@ -7,9 +7,9 @@ class Tile extends React.Component
     render=()=>{
         let temp = [];
             if(this.props.types.length !=0) {
-                pokedex.forEach((element) => {
+                pokedex.forEach((pokemon) => {
                     let x = 0;
-                    element.type.forEach(type => {
+                    pokemon.type.forEach(type => {
                         this.props.types.forEach(type1 => {
                             if (type == type1) {
                                 x++;
@@ -17,7 +17,7 @@ class Tile extends React.Component
                         });
                     });
                     if (x != 0) {
-                        temp.push(element);
+                        temp.push(pokemon);
                     }
                 });
             }
